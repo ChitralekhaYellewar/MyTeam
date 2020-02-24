@@ -1,0 +1,6 @@
+framework module Pods_Jet2Assignment_Jet2AssignmentUITests {
+  umbrella header "Pods-Jet2Assignment-Jet2AssignmentUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
