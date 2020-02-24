@@ -16,6 +16,8 @@
 		B830612324036221008A1C0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B830612224036221008A1C0F /* Assets.xcassets */; };
 		B830612624036221008A1C0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B830612424036221008A1C0F /* LaunchScreen.storyboard */; };
 		B830613C24036221008A1C0F /* Jet2AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830613B24036221008A1C0F /* Jet2AssignmentUITests.swift */; };
+		B88ACBFA2403A90600AF4DD5 /* TeamMemberDetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88ACBF92403A90600AF4DD5 /* TeamMemberDetailScreenViewModel.swift */; };
+		B88ACBFC2403A93600AF4DD5 /* TeamMemberDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88ACBFB2403A93600AF4DD5 /* TeamMemberDetailViewModel.swift */; };
 		B8B3DDD02403645100751FE4 /* TeamMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B3DDCF2403645100751FE4 /* TeamMembersTableViewController.swift */; };
 		B8B3DDD22403645D00751FE4 /* TeamMembersTableViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B3DDD12403645D00751FE4 /* TeamMembersTableViewController+Extention.swift */; };
 		B8B3DDD4240364A300751FE4 /* TeamMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B3DDD3240364A300751FE4 /* TeamMemberDetailViewController.swift */; };
@@ -70,6 +72,8 @@
 		B830613724036221008A1C0F /* Jet2AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jet2AssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B830613B24036221008A1C0F /* Jet2AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jet2AssignmentUITests.swift; sourceTree = "<group>"; };
 		B830613D24036221008A1C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B88ACBF92403A90600AF4DD5 /* TeamMemberDetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberDetailScreenViewModel.swift; sourceTree = "<group>"; };
+		B88ACBFB2403A93600AF4DD5 /* TeamMemberDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberDetailViewModel.swift; sourceTree = "<group>"; };
 		B8B3DDCF2403645100751FE4 /* TeamMembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMembersTableViewController.swift; sourceTree = "<group>"; };
 		B8B3DDD12403645D00751FE4 /* TeamMembersTableViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamMembersTableViewController+Extention.swift"; sourceTree = "<group>"; };
 		B8B3DDD3240364A300751FE4 /* TeamMemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberDetailViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 		B8B3DDDA2403652F00751FE4 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				B88ACBF92403A90600AF4DD5 /* TeamMemberDetailScreenViewModel.swift */,
+				B88ACBFB2403A93600AF4DD5 /* TeamMemberDetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -580,10 +586,12 @@
 				B8B3DDE7240365D300751FE4 /* TeamMember.swift in Sources */,
 				B830611A24036221008A1C0F /* AppDelegate.swift in Sources */,
 				B8B3DDDE2403655600751FE4 /* TeamMemberCellViewModel.swift in Sources */,
+				B88ACBFC2403A93600AF4DD5 /* TeamMemberDetailViewModel.swift in Sources */,
 				B830611C24036221008A1C0F /* SceneDelegate.swift in Sources */,
 				B8B3DDE32403659A00751FE4 /* Constants.swift in Sources */,
 				B8B3DDD4240364A300751FE4 /* TeamMemberDetailViewController.swift in Sources */,
 				B8B3DDD02403645100751FE4 /* TeamMembersTableViewController.swift in Sources */,
+				B88ACBFA2403A90600AF4DD5 /* TeamMemberDetailScreenViewModel.swift in Sources */,
 				B8B3DDD22403645D00751FE4 /* TeamMembersTableViewController+Extention.swift in Sources */,
 				B8B3DDE12403657E00751FE4 /* AppServerClient.swift in Sources */,
 			);

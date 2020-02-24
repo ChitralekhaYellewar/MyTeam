@@ -26,6 +26,11 @@ class TeamMembersTableViewController: UITableViewController {
         }
     }
     
+    //MARK: navigation to detail screen.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Constants.SEGUE.SHOW_DETAILS_TEAMMEMBERS , sender: self)
+    }
+    
 }
 
 

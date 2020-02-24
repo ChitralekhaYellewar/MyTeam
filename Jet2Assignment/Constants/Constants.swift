@@ -21,6 +21,7 @@ struct Constants {
         static let CELL_IDENTIFIER = "TeamMemberUITableViewCell"
     }
     
+    //MARK: Error constants
     struct ERRORS {
         private init() {}
         static let UNAUTHORISED = "Please login to load your teamMembers."
@@ -29,4 +30,9 @@ struct Constants {
         static let NO_DATA = "No data available"
     }
     
+    //MARK: Segue constants
+    struct SEGUE {
+        private init() {}
+        static let SHOW_DETAILS_TEAMMEMBERS = "SHOW_DETAILS_TEAMMEMBERS"
+    }
 }
