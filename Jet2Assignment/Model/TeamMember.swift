@@ -15,13 +15,17 @@ struct TeamMemberResponse: Codable {
 
 //MARK:- TeamMember Model
 struct TeamMember: Codable {
-    let gender: String
-    let name: Name
-    let picture: [String: String]
+    var gender: String
+    var name: Name
+    let picture: ProfilePic
     let email: String
     let dob: BirthDate
     let location: Location
     let phone: String
+}
+
+struct ProfilePic: Codable {
+    let thumbnail : String?
 }
 
 struct Name: Codable {
@@ -44,6 +48,6 @@ struct Location: Codable {
 }
 
 struct Street: Codable {
-    let number: Int
+    let number: String
     let name: String
 }

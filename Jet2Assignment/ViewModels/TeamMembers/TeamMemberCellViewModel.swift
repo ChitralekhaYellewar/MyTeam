@@ -31,7 +31,7 @@ extension TeamMember: TeamMemberCellViewModel {
         return gender
     }
     var profileImageN: String {
-        guard let thumbnail = picture["thumbnail"] else {
+        guard let thumbnail = picture.thumbnail else {
             return ""
         }
         return thumbnail
