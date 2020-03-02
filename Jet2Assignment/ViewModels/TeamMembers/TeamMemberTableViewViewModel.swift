@@ -30,11 +30,11 @@ class TeamMemberTableViewViewModel {
         appServerClient.getTeamMembers(Constants.URLConstants.TEAM_MEMBERS_URL, completion: { [weak self] result in
             switch result {
             case .success(let teamMembers):
-                guard teamMembers.results.count > 0 else {
+                guard teamMembers.data.count > 0 else {
                     self?.teamMemberCells.value = [.empty]
                     return
                 }
-                self?.teamMemberCells.value = teamMembers.results.compactMap { TeamMemberTableViewCellType.normal(cellViewModel: $0 as TeamMemberCellViewModel)}
+                self?.teamMemberCells.value = teamMembers.data.compactMap { TeamMemberTableViewCellType.normal(cellViewModel: $0 as TeamMemberCellViewModel)}
 
             case .failure(let error):
                 self?.teamMemberCells.value = [.error(message: error?.getErrorMessage() ?? "Loading failed..")]
@@ -47,11 +47,12 @@ class TeamMemberTableViewViewModel {
         appServerClient.getTeamMembers(Constants.URLConstants.TEAM_MEMBERS_URL, completion: { [weak self] result in
             switch result {
             case .success(let teamMembers):
-                guard teamMembers.results.count > 0 else {
+                guard teamMembers.data.count > 0 else {
                     self?.teamMemberCells.value = [.empty]
                     return
                 }
-                let resultsArray = teamMembers.results.sorted(by: { $0.name.last < $1.name.last })
+                let resultsArray = teamMembers.data.sorted(by: { $0.name < $1.name })
+                
                 self?.teamMemberCells.value = resultsArray.compactMap { TeamMemberTableViewCellType.normal(cellViewModel: $0 as TeamMemberCellViewModel)}
 
             case .failure(let error):
@@ -65,11 +66,13 @@ class TeamMemberTableViewViewModel {
         appServerClient.getTeamMembers(Constants.URLConstants.TEAM_MEMBERS_URL, completion: { [weak self] result in
             switch result {
             case .success(let teamMembers):
-                guard teamMembers.results.count > 0 else {
+                guard teamMembers.data.count > 0 else {
                     self?.teamMemberCells.value = [.empty]
                     return
                 }
-                let resultsArray = teamMembers.results.sorted(by: { $0.dob.age < $1.dob.age })
+                
+                let resultsArray = teamMembers.data.sorted(by: { Int($0.age)! < Int($1.age)! })
+                
                 self?.teamMemberCells.value = resultsArray.compactMap { TeamMemberTableViewCellType.normal(cellViewModel: $0 as TeamMemberCellViewModel)}
 
             case .failure(let error):

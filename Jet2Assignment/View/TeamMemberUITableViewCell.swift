@@ -13,8 +13,8 @@ class TeamMemberUITableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var firstNameLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
-    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var salaryLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
     
     var viewModel: TeamMemberCellViewModel? {
         didSet {
@@ -24,12 +24,13 @@ class TeamMemberUITableViewCell: UITableViewCell {
     
     //MARK:- bind view model data to uitableview cell.
     private func bindViewModel() {
-        firstNameLabel.text = viewModel?.firstnameN
-        lastNameLabel.text = viewModel?.lastnameN
-        genderLabel.text = viewModel?.genderN
-        guard let profileUrl = viewModel?.profileImageN, let url = URL(string: profileUrl) else {
+        firstNameLabel.text = viewModel?.name
+        salaryLabel.text = viewModel?.salary
+        ageLabel.text = viewModel?.age
+        guard let profileUrl = viewModel?.profileImage, let url = URL(string: profileUrl) else {
+            profileImageView.image = UIImage(named: "profile")
             return
         }
-        profileImageView.sd_setImage(with: url, placeholderImage: UIImage())
+        profileImageView.sd_setImage(with: url, placeholderImage: UIImage(named: "profile"))
     }
 }

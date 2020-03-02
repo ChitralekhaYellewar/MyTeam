@@ -11,27 +11,28 @@ import Foundation
 //MARK:- TeamMemberCellViewModel protocol
 protocol TeamMemberCellViewModel {
     var teamMember: TeamMember { get }
-    var firstnameN: String { get }
-    var lastnameN: String { get }
-    var genderN: String { get }
-    var profileImageN: String { get }
+
+    var name: String { get }
+    var salary: String { get }
+    var age: String { get }
+    var profileImage: String { get }
 }
 
 extension TeamMember: TeamMemberCellViewModel {
     var teamMember: TeamMember {
         return self
     }
-    var firstnameN: String {
-        return name.first
+    var name: String {
+        return employee_name
     }
-    var lastnameN: String {
-        return name.last
+    var salary: String {
+        return employee_salary
     }
-    var genderN: String {
-        return gender
+    var age: String {
+        return employee_age
     }
-    var profileImageN: String {
-        guard let thumbnail = picture.thumbnail else {
+    var profileImage: String {
+        guard let thumbnail = profile_image else {
             return ""
         }
         return thumbnail

@@ -14,7 +14,7 @@ class TeamMemberTableViewViewModelTests: XCTestCase {
     // MARK: - getTeamMember
     func testNormalTeamMemberCells() {
         let appServerClient = MockAppServerClient()
-        appServerClient.getTeamMemberResult = .success(payload: TeamMemberResponse(results: [TeamMember.with()]))//.success(payload: [TeamMember.with()])
+        appServerClient.getTeamMemberResult = .success(payload: TeamMemberResponse(data: [TeamMember.with()]))
 
         let viewModel = TeamMemberTableViewViewModel(appServerClient: appServerClient)
         viewModel.getTeamMembers()
@@ -27,7 +27,7 @@ class TeamMemberTableViewViewModelTests: XCTestCase {
 
     func testEmptyTeamMemberCells() {
         let appServerClient = MockAppServerClient()
-        appServerClient.getTeamMemberResult = .success(payload: TeamMemberResponse(results: []))
+        appServerClient.getTeamMemberResult = .success(payload: TeamMemberResponse(data: []))
 
         let viewModel = TeamMemberTableViewViewModel(appServerClient: appServerClient)
         viewModel.getTeamMembers()

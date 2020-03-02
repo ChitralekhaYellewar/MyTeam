@@ -10,12 +10,10 @@ import Foundation
 
 protocol TeamMemberDetailViewModel {
     var teamMember: TeamMember { get }
-    var firstname: String { get }
-    var lastname: String { get }
-    var gender: String { get }
-    var dateOfBirth: String { get }
+    
+    var name: String { get }
+    var salary: String { get }
+    var age: String { get }
     var profileImage: String { get }
-    var emailId: String { get }
-    var phoneNum: String { get }
-    var address: String { get }
+    
 }

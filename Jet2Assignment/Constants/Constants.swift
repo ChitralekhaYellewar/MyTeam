@@ -12,7 +12,7 @@ struct Constants {
     //MARK: URL Constants
     struct URLConstants {
         private init() {}
-        static let TEAM_MEMBERS_URL = "https://randomuser.me/api/?page=1&results=5&seed=abc"
+        static let TEAM_MEMBERS_URL = "http://dummy.restapiexample.com/api/v1/employees"//"https://randomuser.me/api/?page=1&results=5&seed=abc"
     }
     
     //MARK: TableView Constants

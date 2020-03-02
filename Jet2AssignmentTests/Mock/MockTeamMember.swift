@@ -10,8 +10,8 @@ import Foundation
 @testable import Jet2Assignment
 
 extension TeamMember {
-    static func with(gender: String = "male", name: Name = Name(title: "Mr", first: "brad", last: "gibson"),picture: ProfilePic = ProfilePic(thumbnail: "https://randomuser.me/api/portraits/thumb/men/75.jpg"), email: String = "brad.gibson@example.com", dob: BirthDate = BirthDate(date: "1993-07-20T09:44:18.674Z", age: 26), location: Location = Location(street: Street(number: "9278 new road", name: ""), city: "kilcoole", state: "waterford", country: " "), phone: String = "011-962-7516") -> TeamMember
-    {
-        return TeamMember(gender: gender, name: name, picture: picture, email: email, dob: dob, location: location, phone: phone)
+    
+    static func with(name: String = "Tiger Nixon", salary: String = "320800", age: String = "61", image: String = "") -> TeamMember {
+        return TeamMember(employee_name: name, employee_salary: salary, employee_age: age, profile_image: image)
     }
 }

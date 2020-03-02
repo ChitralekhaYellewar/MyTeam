@@ -8,7 +8,13 @@
 
 import UIKit
 
-class TeamMembersTableViewController: UITableViewController {
+class TeamMembersTableViewController: UIViewController {
+    
+    @IBOutlet weak var sortMenuPicker: UIPickerView!
+    @IBOutlet weak var sortHeight: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
+    
+    let pickerData = ["sort by name", "sort by age"]
         
     let viewModel: TeamMemberTableViewViewModel = TeamMemberTableViewViewModel()
     
@@ -27,10 +33,31 @@ class TeamMembersTableViewController: UITableViewController {
     }
     
     //MARK: navigation to detail screen.
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Constants.SEGUE.SHOW_DETAILS_TEAMMEMBERS , sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SHOW_DETAILS_TEAMMEMBERS",
+            let destinationViewController = segue.destination as? TeamMemberDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+            
+            switch viewModel.teamMemberCells.value[indexPath.row] {
+                
+            case .normal(let viewModel):
+                destinationViewController.detailViewModel = TeamMemberDetailScreenViewModel(teamMember: viewModel.teamMember)
+                
+            case .empty, .error:
+                break
+            }
+        }
+        
+    }
+
+    @IBAction func sortTapped() {
+        sortMenuPicker.isHidden = sortMenuPicker.isHidden ? false : true
+        sortHeight.constant = sortMenuPicker.isHidden ? 0 : 100
+    }
 }
 
 

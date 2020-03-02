@@ -9,11 +9,24 @@
 import Foundation
 
 class TeamMemberDetailScreenViewModel: TeamMemberDetailViewModel {
-    var firstname: String {
-        return teamMember.name.first
+    var name: String {
+        return teamMember.name
     }
     
-    var lastname: String {
+    var salary: String {
+        return teamMember.salary
+    }
+    
+    var age: String {
+        return teamMember.age
+    }
+    
+    var profileImage: String {
+        return teamMember.profileImage
+    }
+    
+    
+   /* var lastname: String {
         return teamMember.name.last
     }
     
@@ -41,8 +54,8 @@ class TeamMemberDetailScreenViewModel: TeamMemberDetailViewModel {
     }
     
     var address: String {
-        return "\(teamMember.location.street.number)" + teamMember.location.street.name + teamMember.location.city + teamMember.location.country
-    }
+        return teamMember.location.street + teamMember.location.city + teamMember.location.state + teamMember.location.postcode
+    } */
     
     var teamMember: TeamMember
     

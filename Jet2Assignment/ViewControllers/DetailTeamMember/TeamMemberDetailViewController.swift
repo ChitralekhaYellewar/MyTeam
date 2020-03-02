@@ -26,14 +26,13 @@ class TeamMemberDetailViewController: UIViewController {
     }
     
     func bindViewModel() {
-        firstNameLabel.text = detailViewModel?.firstname
-        lastNameLabel.text = detailViewModel?.lastname
-        dobLabel.text = detailViewModel?.dateOfBirth
-        locationLabel.text = detailViewModel?.address
-        emailLabel.text = detailViewModel?.emailId
-        phoneNumberLabel.text = detailViewModel?.phoneNum
+
+        firstNameLabel.text = detailViewModel?.name
+        lastNameLabel.text = detailViewModel?.salary
+        dobLabel.text = detailViewModel?.age
         
         guard let profileUrl = detailViewModel?.profileImage, let url = URL(string: profileUrl) else {
+            profileImageView.image = UIImage(named: "profile")
             return
         }
         profileImageView.sd_setImage(with: url, placeholderImage: UIImage())

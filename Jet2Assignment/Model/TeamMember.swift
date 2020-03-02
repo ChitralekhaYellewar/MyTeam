@@ -10,11 +10,11 @@ import Foundation
 
 //MARK:- TeamMember Response Model 
 struct TeamMemberResponse: Codable {
-    let results: [TeamMember]
+    let data: [TeamMember]
 }
 
 //MARK:- TeamMember Model
-struct TeamMember: Codable {
+/*struct TeamMember: Codable {
     var gender: String
     var name: Name
     let picture: ProfilePic
@@ -40,14 +40,20 @@ struct BirthDate: Codable {
 }
 
 struct Location: Codable {
-    let street: Street
+    let street: String
     let city: String
     let state: String
-    let country: String
-    //let postcode: Int16
+    let postcode: String
 }
 
 struct Street: Codable {
-    let number: String
-    let name: String
+    let number: String?
+    let name: String?
+} */
+
+struct TeamMember: Codable {
+    let employee_name: String
+    let employee_salary: String
+    let employee_age: String
+    let profile_image: String?
 }
