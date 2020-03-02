@@ -16,10 +16,8 @@
 		B830612324036221008A1C0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B830612224036221008A1C0F /* Assets.xcassets */; };
 		B830612624036221008A1C0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B830612424036221008A1C0F /* LaunchScreen.storyboard */; };
 		B830613C24036221008A1C0F /* Jet2AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830613B24036221008A1C0F /* Jet2AssignmentUITests.swift */; };
-		B849B429240697FC00C87634 /* Jet2Assignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B849B427240697FC00C87634 /* Jet2Assignment.xcdatamodeld */; };
 		B88ACBFA2403A90600AF4DD5 /* TeamMemberDetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88ACBF92403A90600AF4DD5 /* TeamMemberDetailScreenViewModel.swift */; };
 		B88ACBFC2403A93600AF4DD5 /* TeamMemberDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88ACBFB2403A93600AF4DD5 /* TeamMemberDetailViewModel.swift */; };
-		B88ACC002403F49C00AF4DD5 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = B88ACBFF2403F49C00AF4DD5 /* test.json */; };
 		B8B3DDD02403645100751FE4 /* TeamMembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B3DDCF2403645100751FE4 /* TeamMembersTableViewController.swift */; };
 		B8B3DDD22403645D00751FE4 /* TeamMembersTableViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B3DDD12403645D00751FE4 /* TeamMembersTableViewController+Extention.swift */; };
 		B8B3DDD4240364A300751FE4 /* TeamMemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B3DDD3240364A300751FE4 /* TeamMemberDetailViewController.swift */; };
@@ -74,10 +72,8 @@
 		B830613724036221008A1C0F /* Jet2AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jet2AssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B830613B24036221008A1C0F /* Jet2AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jet2AssignmentUITests.swift; sourceTree = "<group>"; };
 		B830613D24036221008A1C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B849B428240697FC00C87634 /* Jet2Assignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jet2Assignment.xcdatamodel; sourceTree = "<group>"; };
 		B88ACBF92403A90600AF4DD5 /* TeamMemberDetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberDetailScreenViewModel.swift; sourceTree = "<group>"; };
 		B88ACBFB2403A93600AF4DD5 /* TeamMemberDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberDetailViewModel.swift; sourceTree = "<group>"; };
-		B88ACBFF2403F49C00AF4DD5 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		B8B3DDCF2403645100751FE4 /* TeamMembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMembersTableViewController.swift; sourceTree = "<group>"; };
 		B8B3DDD12403645D00751FE4 /* TeamMembersTableViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamMembersTableViewController+Extention.swift"; sourceTree = "<group>"; };
 		B8B3DDD3240364A300751FE4 /* TeamMemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberDetailViewController.swift; sourceTree = "<group>"; };
@@ -155,8 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				B8BBFC9A240CE35C00F48A71 /* Jet2AssignmentTests-Bridging-Header.h */,
-				B849B427240697FC00C87634 /* Jet2Assignment.xcdatamodeld */,
-				B88ACBFF2403F49C00AF4DD5 /* test.json */,
 				B830611824036221008A1C0F /* Jet2Assignment */,
 				B830612F24036221008A1C0F /* Jet2AssignmentTests */,
 				B830613A24036221008A1C0F /* Jet2AssignmentUITests */,
@@ -179,7 +173,6 @@
 		B830611824036221008A1C0F /* Jet2Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				B849B43824069AC400C87634 /* Data */,
 				B8B3DDE8240366C400751FE4 /* Helper */,
 				B8B3DDE5240365C600751FE4 /* Model */,
 				B8B3DDDF2403656F00751FE4 /* Service */,
@@ -215,13 +208,6 @@
 				B830613D24036221008A1C0F /* Info.plist */,
 			);
 			path = Jet2AssignmentUITests;
-			sourceTree = "<group>";
-		};
-		B849B43824069AC400C87634 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		B8B3DDCC2403641900751FE4 /* ViewControllers */ = {
@@ -456,7 +442,6 @@
 			files = (
 				B830612624036221008A1C0F /* LaunchScreen.storyboard in Resources */,
 				B830612324036221008A1C0F /* Assets.xcassets in Resources */,
-				B88ACC002403F49C00AF4DD5 /* test.json in Resources */,
 				B830612124036221008A1C0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,7 +576,6 @@
 				B8B3DDDC2403654000751FE4 /* TeamMemberTableViewViewModel.swift in Sources */,
 				B8B3DDEA240366CA00751FE4 /* Bindable.swift in Sources */,
 				B8B3DE012403A34F00751FE4 /* Result.swift in Sources */,
-				B849B429240697FC00C87634 /* Jet2Assignment.xcdatamodeld in Sources */,
 				B8B3DDE7240365D300751FE4 /* TeamMember.swift in Sources */,
 				B830611A24036221008A1C0F /* AppDelegate.swift in Sources */,
 				B8B3DDDE2403655600751FE4 /* TeamMemberCellViewModel.swift in Sources */,
@@ -946,19 +930,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B849B427240697FC00C87634 /* Jet2Assignment.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B849B428240697FC00C87634 /* Jet2Assignment.xcdatamodel */,
-			);
-			currentVersion = B849B428240697FC00C87634 /* Jet2Assignment.xcdatamodel */;
-			path = Jet2Assignment.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B830610E24036221008A1C0F /* Project object */;
 }
